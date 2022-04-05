@@ -12,17 +12,17 @@ const server = express();
 server.use(express.static(path.join(__dirname, '../public')));
 
 // Rotas
-server.use('/api/', mainRoutes);
+server.use('https://api-petshop-lins.vercel.app/api/', mainRoutes);
 
 server.use((req, res) => {
   res.send('Página não encotrada!');
 });
 
-const PORT = process.env.PORT || 3001;
+/* const PORT = process.env.PORT || 3001;
 
 
 // Executa os server, na port 3000
 server.listen(() => {
   const url = process.env.BASE_URL;
   console.log(`Listening on ${url}`);
-});
+}); */
