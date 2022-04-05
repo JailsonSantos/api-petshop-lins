@@ -18,11 +18,14 @@ server.use((req, res) => {
   res.send('Página não encotrada!');
 });
 
-const PORT = process.env.PORT || 3001;
+//const PORT = process.env.PORT || 3001;
 
 
 // Executa os server, na port 3000
-server.listen(PORT, () => {
+/* server.listen(PORT, () => {
   const url = `http://localhost:${PORT}/`;
   console.log(`Listening on ${url}`);
-});
+}); */
+
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
