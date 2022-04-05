@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
-import mainRoutes from '../routes/index';
+import mainRoutes from './routes/index';
 
 dotenv.config();
 
@@ -18,17 +18,11 @@ server.use((req, res) => {
   res.send('Página não encotrada!');
 });
 
-//const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
-/* 
-// Executa os server, na port 3000
-server.listen(() => {
-  const url = process.env.BASE_URL;
-  console.log(`Listening on ${url}`);
-}); */
 
 // Executa os server, na port 3000
-server.listen(() => {
-  const url = `https://api-petshop-lins.vercel.app/`;
+server.listen(PORT, () => {
+  const url = `http://localhost:${PORT}/`;
   console.log(`Listening on ${url}`);
 });
