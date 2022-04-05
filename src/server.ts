@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3001;
 
 
 // Executa os server, na port 3000
-server.listen(PORT, () => {
-  const url = `http://localhost:${PORT}/`;
+server.listen(() => {
+  const url = process.env.BASE_URL;
   console.log(`Listening on ${url}`);
 });
